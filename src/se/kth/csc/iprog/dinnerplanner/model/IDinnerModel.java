@@ -5,6 +5,7 @@ import java.util.Set;
 public interface IDinnerModel {
 
 	public int getNumberOfGuests();
+	
 	public void setNumberOfGuests(int numberOfGuests);
 	
 	/**
