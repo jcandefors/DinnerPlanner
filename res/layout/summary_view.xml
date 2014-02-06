@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/summary_view_id"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -24,32 +25,31 @@
             android:text="@string/total_cost"
             android:textSize="20sp" />
     </LinearLayout>
-    
-        <TextView
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="180dp"
+        android:layout_marginTop="10dp"
         android:text="@string/instructions_text" />
-    
-    
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
-        
+
         <ImageButton
             android:id="@+id/imageButton1"
-            android:layout_marginRight="20dp"
             android:layout_width="101dp"
             android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
             android:src="@drawable/bakedbrie" />
 
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="59dp"
-            android:layout_height="56dp"            
+            android:layout_height="56dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/icecream" />
 
@@ -112,11 +112,10 @@
         android:layout_marginTop="20dp"
         android:text="Test"
         android:textSize="25dp" />
-    
-      <ListView 
-          android:id="@+id/listView"
-          android:layout_height="match_parent"
-          android:layout_width="match_parent" />
 
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

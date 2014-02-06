@@ -12,6 +12,9 @@ public class Start extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_start);
+		
+    	// Creating the view class instance
+    	StartView startView = new StartView(findViewById(R.id.start_view_id));
 	}
 
 	@Override
