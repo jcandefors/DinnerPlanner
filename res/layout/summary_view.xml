@@ -33,6 +33,7 @@
 
         <ImageButton
             android:id="@+id/imageButton1"
+            android:layout_marginRight="20dp"
             android:layout_width="101dp"
             android:layout_height="match_parent"
             android:src="@drawable/bakedbrie" />
@@ -40,14 +41,15 @@
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="59dp"
-            android:layout_height="56dp"
-            android:layout_marginLeft="30dp"
+            android:layout_height="56dp"            
+            android:layout_marginRight="10dp"
             android:src="@drawable/icecream" />
 
         <ImageButton
             android:id="@+id/imageButton3"
             android:layout_width="60dp"
             android:layout_height="56dp"
+            android:layout_marginRight="10dp"
             android:src="@drawable/meatballs" />
 
         <ImageButton
@@ -66,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="45dp"
             android:text="@string/ingredients_text" />
 
         <TextView
@@ -78,8 +80,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:text="Test" />
 
         <TextView
