@@ -9,5 +9,7 @@
     <string name="total_cost">Total cost: 1250 kr</string>
     <string name="ingredients_text">Ingredients</string>
     <string name="instructions_text">Instructions</string>
+    <string name="title_activity_start">Start</string>
+    <string name="title_activity_summary">Summary</string>
 
 </resources>
