@@ -7,6 +7,7 @@
     <string name="text">Welcome to Dinner Planner! \n\nHere you will be easily plan your dinner. \n\nOn the next page start by selecting number of participants.\nThen select your courses.\n\nWatch Magic Happen!</string>
     <string name="button_text">Start</string>
     <string name="total_cost">Total cost: 1250 kr</string>
-    <string name="ingredients_text">ingredients</string>
+    <string name="ingredients_text">Ingredients</string>
+    <string name="instructions_text">Instructions</string>
 
 </resources>

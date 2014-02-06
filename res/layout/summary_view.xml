@@ -24,13 +24,21 @@
             android:text="@string/total_cost"
             android:textSize="20sp" />
     </LinearLayout>
-
+    
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="180dp"
+        android:text="@string/instructions_text" />
+    
+    
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:orientation="horizontal" >
-
+        
         <ImageButton
             android:id="@+id/imageButton1"
             android:layout_marginRight="20dp"
