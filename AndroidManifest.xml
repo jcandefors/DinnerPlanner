@@ -23,14 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="se.kth.csc.iprog.dinnerplanner.android.Start"
-            android:label="@string/title_activity_start" >
-        </activity>
-        <activity
-            android:name="se.kth.csc.iprog.dinnerplanner.android.Summary"
-            android:label="@string/title_activity_summary" >
-        </activity>
     </application>
 
 </manifest>
