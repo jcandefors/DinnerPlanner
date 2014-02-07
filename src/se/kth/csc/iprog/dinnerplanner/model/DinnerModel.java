@@ -58,6 +58,12 @@ public class DinnerModel implements IDinnerModel{
 		dish2.addIngredient(dish2ing10);
 		dish2.addIngredient(dish2ing11);
 		dishes.add(dish2);
+		
+		
+		//TO check summary activity
+		selectedDishes.add(dish1);
+		selectedDishes.add(dish2);
+		setNumberOfGuests(4);
 
 	}
 
@@ -132,9 +138,9 @@ public class DinnerModel implements IDinnerModel{
 	@Override
 	public float getTotalMenuPrice() {
 		float price = 0;
-		Ingredient[] ingredients = (Ingredient[]) getAllIngredients().toArray();
+		Set<Ingredient> ingredients = getAllIngredients();
 		for (Ingredient i : ingredients){
-			price += i.getPrice()*getNumberOfGuests();
+			price += i.getPrice()*nrOfGuests;
 		}
 		return price;
 	}

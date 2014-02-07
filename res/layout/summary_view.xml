@@ -3,34 +3,36 @@
     android:id="@+id/summary_view_id"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/imageButton1"
-            android:layout_width="62dp"
-            android:layout_height="36dp"
-            android:src="@drawable/bakedbrie" />
+            android:id="@+id/img_backarrow"
+            android:layout_width="60dp"
+            android:layout_height="31dp"
+            android:src="@drawable/left_arrow" />
 
         <TextView
             android:id="@+id/totalcost_text"
-            android:layout_width="170dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_backarrow"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
             android:layout_marginTop="10dp"
             android:text="@string/total_cost"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:textSize="15sp" />
+    </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:layout_marginLeft="180dp"
+        android:layout_marginLeft="145dp"
         android:layout_marginTop="10dp"
         android:text="@string/instructions_text" />
 
@@ -40,31 +42,41 @@
         android:orientation="horizontal" >
 
         <ImageButton
-            android:id="@+id/imageButton1"
-            android:layout_width="101dp"
-            android:layout_height="match_parent"
+            android:id="@+id/ingrButton1"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
-            android:src="@drawable/bakedbrie" />
+            android:layout_weight="3"
+            android:onClick="changeTab"
+            android:src="@drawable/ingr_img" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="59dp"
+            android:id="@+id/instrButton1"
+            android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/icecream" />
+            android:layout_weight="1"
+            android:onClick="changeTab"
+             />
 
         <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="60dp"
+            android:id="@+id/instrButton2"
+            android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/meatballs" />
+            android:layout_weight="1"
+            android:onClick="changeTab"
+             />
 
         <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="60dp"
-            android:layout_height="58dp"
-            android:src="@drawable/sourdough" />
+            android:id="@+id/instrButton3"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:onClick="changeTab"
+             />
     </LinearLayout>
 
     <LinearLayout
@@ -75,47 +87,88 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:textSize="12sp"
             android:text="@string/ingredients_text" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/instrText1_id"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:text="Test" />
+            android:layout_marginRight="5dp"
+            android:textSize="10sp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/instrText2_id"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:text="Test" />
+            android:layout_marginRight="5dp"
+            android:textSize="10sp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/instrText3_id"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:text="Test" />
+            android:layout_marginRight="5dp"
+            android:textSize="10sp" />
+
     </LinearLayout>
-
+    
     <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:background="@android:color/black" />
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/black" />
+    
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:text="Test"
-        android:textSize="25dp" />
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="vertical" >
+     
+       <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+                
+        <TextView
+            android:id="@+id/summary_text_title_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"            
+            android:textSize="20dp" />
+        
+        <TextView
+            android:id="@+id/ingr_nrpersons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/summary_text_title_id"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:textSize="15dp" />
+        
+        	</RelativeLayout>
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/summary_Course_Title_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"            
+            android:textSize="15dp" />        
+
+        
+        <TextView
+            android:id="@+id/summary_textarea_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:textSize="10dp" />
+        
+    </LinearLayout>
 
 </LinearLayout>

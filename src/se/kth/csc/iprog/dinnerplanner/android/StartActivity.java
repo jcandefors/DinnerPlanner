@@ -1,12 +1,13 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
+import se.kth.csc.iprog.dinnerplanner.R;
 import se.kth.csc.iprog.dinnerplanner.android.view.*;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
-public class Start extends Activity {
+public class StartActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
