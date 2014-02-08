@@ -9,6 +9,7 @@ import se.kth.csc.iprog.dinnerplanner.model.Dish;
 import se.kth.csc.iprog.dinnerplanner.model.Ingredient;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class SummaryView {
@@ -83,6 +84,7 @@ public class SummaryView {
 		TextView coursetitle = (TextView) view.findViewById(R.id.summary_Course_Title_id);
 		TextView nrofpers = (TextView) view.findViewById(R.id.ingr_nrpersons);
 		TextView textArea = (TextView) view.findViewById(R.id.summary_textarea_id);
+		TextView unitText = (TextView) view.findViewById(R.id.summary_unittext_id);
 
 		switch(type){
 		case INGREDIENTS : 			
@@ -91,11 +93,15 @@ public class SummaryView {
 			nrofpers.setVisibility(view.VISIBLE);	
 			nrofpers.setText(model.getNumberOfGuests()+" pers");
 			Set<Ingredient> ingredients = model.getAllIngredients();
-			StringBuilder sb = new StringBuilder(); 
+			StringBuilder namesb = new StringBuilder(); 
+			StringBuilder unitsb = new StringBuilder();
 			for (Ingredient i : ingredients) {
-				sb.append(i.getName() +" "+i.getQuantity()*model.getNumberOfGuests()+" "+i.getUnit()+"\n");
+				namesb.append(i.getName() +"\n");
+				unitsb.append(i.getQuantity()*model.getNumberOfGuests()+" "+i.getUnit()+"\n");
 			}
-			textArea.setText(sb.toString());
+			textArea.setText(namesb.toString());
+			unitText.setText(unitsb.toString());
+			unitText.setVisibility(view.VISIBLE);
 			break;
 		case STARTER :  
 			title.setText(R.string.starter_text);
@@ -103,6 +109,7 @@ public class SummaryView {
 			coursetitle.setVisibility(view.VISIBLE);
 			nrofpers.setVisibility(view.GONE);
 			textArea.setText(starter.getDescription());
+			unitText.setVisibility(view.GONE);
 			break;
 		case MAIN :
 			title.setText(R.string.main_text);
@@ -110,6 +117,7 @@ public class SummaryView {
 			coursetitle.setVisibility(view.VISIBLE);
 			nrofpers.setVisibility(view.GONE);
 			textArea.setText(main.getDescription());
+			unitText.setVisibility(view.GONE);
 			break;
 		case DESERT :
 			title.setText(R.string.desert_text);
@@ -117,6 +125,7 @@ public class SummaryView {
 			coursetitle.setVisibility(view.VISIBLE);
 			nrofpers.setVisibility(view.GONE);
 			textArea.setText(desert.getDescription());
+			unitText.setVisibility(view.GONE);
 			break;
 		}
 	}
