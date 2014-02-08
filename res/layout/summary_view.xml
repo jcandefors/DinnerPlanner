@@ -3,12 +3,11 @@
     android:id="@+id/summary_view_id"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-    >
+    android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" >
 
         <ImageButton
             android:id="@+id/img_backarrow"
@@ -20,10 +19,10 @@
             android:id="@+id/totalcost_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/img_backarrow"
             android:layout_alignParentRight="true"
-            android:gravity="right"
             android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/img_backarrow"
+            android:gravity="right"
             android:text="@string/total_cost"
             android:textSize="15sp" />
     </RelativeLayout>
@@ -58,7 +57,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:onClick="changeTab"
-             />
+            android:src="@drawable/img_holder" />
 
         <ImageButton
             android:id="@+id/instrButton2"
@@ -67,7 +66,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:onClick="changeTab"
-             />
+            android:src="@drawable/img_holder" />
 
         <ImageButton
             android:id="@+id/instrButton3"
@@ -76,7 +75,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:onClick="changeTab"
-             />
+            android:src="@drawable/img_holder" />
     </LinearLayout>
 
     <LinearLayout
@@ -89,8 +88,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
-            android:textSize="12sp"
-            android:text="@string/ingredients_text" />
+            android:text="@string/ingredients_text"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/instrText1_id"
@@ -112,63 +111,58 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:textSize="10sp" />
-
     </LinearLayout>
-    
+
     <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/black" />
-    
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:orientation="vertical" >
-     
-       <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-                
-        <TextView
-            android:id="@+id/summary_text_title_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"            
-            android:textSize="20dp" />
-        
-        <TextView
-            android:id="@+id/ingr_nrpersons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/summary_text_title_id"
-            android:layout_marginTop="5dp"
-            android:gravity="right"
-            android:layout_alignParentRight="true"
-            android:textSize="15dp" />
-        
-        	</RelativeLayout>
+        android:paddingRight="15dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/summary_text_title_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/ingr_nrpersons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/summary_text_title_id"
+                android:gravity="right"
+                android:textSize="15dp" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/summary_Course_Title_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"            
-            android:textSize="15dp" />        
+            android:layout_marginTop="5dp"
+            android:textSize="15dp" />
 
-        
         <TextView
             android:id="@+id/summary_textarea_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="top"
             android:textSize="10dp" />
-        
     </LinearLayout>
 
 </LinearLayout>
