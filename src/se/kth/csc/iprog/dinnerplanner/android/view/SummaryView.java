@@ -93,7 +93,7 @@ public class SummaryView {
 			Set<Ingredient> ingredients = model.getAllIngredients();
 			StringBuilder sb = new StringBuilder(); 
 			for (Ingredient i : ingredients) {
-				sb.append(i.getName() +" "+i.getQuantity()+" "+i.getUnit()+"\n");
+				sb.append(i.getName() +" "+i.getQuantity()*model.getNumberOfGuests()+" "+i.getUnit()+"\n");
 			}
 			textArea.setText(sb.toString());
 			break;
