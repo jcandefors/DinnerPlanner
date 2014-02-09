@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_view_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ImageButton
+        android:id="@+id/backarrow_id"
+        android:layout_width="60dp"
+        android:layout_height="31dp"
+        android:layout_marginRight="70dp"
+        android:src="@drawable/left_arrow"
+        />
+
+    <TextView
+        android:id="@+id/TextParticipants"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_participants" />
+
+    <Spinner
+        android:id="@+id/spinner_guests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        tools:listitem="@android:layout/simple_spinner_dropdown_item" />
+
+    <TextView
+        android:id="@+id/totalcost_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:gravity="right"
+        android:text="@string/total_cost"
+        android:textSize="15sp" />
+
+</LinearLayout>

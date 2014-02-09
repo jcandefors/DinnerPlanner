@@ -2,6 +2,7 @@ package se.kth.csc.iprog.dinnerplanner.android;
 
 import se.kth.csc.iprog.dinnerplanner.R;
 import se.kth.csc.iprog.dinnerplanner.android.view.SummaryView;
+import se.kth.csc.iprog.dinnerplanner.android.view.TopView;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import android.os.Bundle;
 import android.app.Activity;
@@ -9,6 +10,7 @@ import android.view.Menu;
 import android.view.View;
 
 public class SummaryActivity extends Activity {
+	TopView top;
 	SummaryView summaryView;
 	DinnerModel model;
 	
@@ -18,7 +20,10 @@ public class SummaryActivity extends Activity {
 		setContentView(R.layout.activity_summary);
     	// Creating the view class instance
 		model = ((DinnerPlannerApplication) this.getApplication()).getModel();
-    	summaryView = new SummaryView(findViewById(R.id.summary_view_id), model);
+    	top = new TopView(findViewById(R.id.top_view_id), model);
+    	top.hideSpinner();
+		summaryView = new SummaryView(findViewById(R.id.summary_view_id), model);
+    	
     	
     	
 	}

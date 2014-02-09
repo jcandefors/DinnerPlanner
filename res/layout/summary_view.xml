@@ -5,36 +5,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
         android:orientation="vertical" >
-
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
-
-            <ImageButton
-                android:id="@+id/img_backarrow"
-                android:layout_width="60dp"
-                android:layout_height="31dp"
-                android:src="@drawable/left_arrow" />
-
-            <TextView
-                android:id="@+id/totalcost_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/img_backarrow"
-                android:gravity="right"
-                android:text="@string/total_cost"
-                android:textSize="15sp" />
-        </RelativeLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:layout_marginLeft="145dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="145dp"            
             android:text="@string/instructions_text" />
 
         <LinearLayout
@@ -138,8 +116,8 @@
                     android:id="@+id/summary_text_title_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
                     android:textSize="20dp" />
 
                 <TextView
@@ -147,7 +125,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/summary_text_title_id"
                     android:gravity="right"
                     android:textSize="15dp" />
@@ -175,6 +153,7 @@
                     android:id="@+id/summary_unittext_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
                     android:gravity="top"
                     android:textSize="15dp" />
             </LinearLayout>

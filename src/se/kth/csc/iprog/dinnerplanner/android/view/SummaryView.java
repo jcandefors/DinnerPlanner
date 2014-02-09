@@ -10,6 +10,7 @@ import se.kth.csc.iprog.dinnerplanner.model.Ingredient;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class SummaryView {
@@ -29,11 +30,6 @@ public class SummaryView {
 
 		// store in the class the reference to the Android View
 		this.view = view;
-
-		// Display total cost in the Summary
-		TextView totalcost = (TextView) view.findViewById(R.id.totalcost_text);
-		totalcost.setText(view.getResources().getString(R.string.total_cost)+" "+ model.getTotalMenuPrice() + " kr");
-
 
 		// Get Starter ImageButton and TextView
 		ImageButton instrbutton1 = (ImageButton) view.findViewById(R.id.instrButton1);		
