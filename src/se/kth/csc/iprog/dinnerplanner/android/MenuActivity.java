@@ -1,8 +1,6 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
 import se.kth.csc.iprog.dinnerplanner.R;
-import se.kth.csc.iprog.dinnerplanner.R.layout;
-import se.kth.csc.iprog.dinnerplanner.R.menu;
 import se.kth.csc.iprog.dinnerplanner.android.view.MenuView;
 import se.kth.csc.iprog.dinnerplanner.android.view.TopView;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
