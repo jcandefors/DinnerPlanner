@@ -36,11 +36,8 @@ public class TopView {
 		guestsSpinner.setAdapter(adapter);
 
 		//Total cost for all selected dishes. Needs to be changed after each selection.
-
 		totalCost = (TextView) view.findViewById(R.id.totalcost_text);
-		totalCost.setText("Total cost: " + model.getTotalMenuPrice() +"kr" );
-		
-		
+		totalCost.setText("Total cost: " + model.getTotalMenuPrice() +"kr" );		
 	}
 
 	public void setTotalCost() {
