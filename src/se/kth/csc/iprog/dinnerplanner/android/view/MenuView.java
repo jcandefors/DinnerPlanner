@@ -1,5 +1,7 @@
 package se.kth.csc.iprog.dinnerplanner.android.view;
 
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Set;
 import se.kth.csc.iprog.dinnerplanner.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
@@ -15,12 +17,12 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-public class MenuView {
+public class MenuView implements Observer {
 
 	View view;
 	DinnerModel model;
 	Context context;
-	PopupWindow popupWindow;
+	PopupWindow popupWindow;	
 
 	public MenuView(View view, DinnerModel model, final Context context) {
 		this.view = view;
@@ -34,7 +36,6 @@ public class MenuView {
 		Set<Dish> starters = model.getDishesOfType(1);
 		Set<Dish> mains = model.getDishesOfType(2);
 		Set<Dish> desserts = model.getDishesOfType(3);
-
 
 		//The three for-loops below should create new elements (one vertical view + imagebutton and textview for each dish),
 		//but it seems as though setting layout parameters is frowned upon..
@@ -104,6 +105,13 @@ public class MenuView {
 			public void onClick(View v) {
 				popupWindow.dismiss();
 			}});
+	}
+
+	@Override
+	public void update(Observable mod, Object o) {
+		mod.addObserver(this);
+		// TODO Auto-generated method stub
+		// Pass in notifyObservers method i.e
 	}
 
 }

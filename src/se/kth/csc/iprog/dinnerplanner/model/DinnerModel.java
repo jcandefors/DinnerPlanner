@@ -3,7 +3,9 @@ package se.kth.csc.iprog.dinnerplanner.model;
 import java.util.HashSet;
 import java.util.Set;
 
-public class DinnerModel implements IDinnerModel{
+import android.database.Observable;
+
+public class DinnerModel extends Observable<Object> implements IDinnerModel {
 	private int nrOfGuests;
 	Set<Dish> dishes = new HashSet<Dish>();
 	Set<Dish> selectedDishes = new HashSet<Dish>(3);

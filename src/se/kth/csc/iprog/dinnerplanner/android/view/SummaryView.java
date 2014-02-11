@@ -1,21 +1,17 @@
 package se.kth.csc.iprog.dinnerplanner.android.view;
 
-
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Set;
-
 import se.kth.csc.iprog.dinnerplanner.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
 import se.kth.csc.iprog.dinnerplanner.model.Ingredient;
-import android.R.color;
 import android.view.View;
-import android.webkit.WebView.FindListener;
 import android.widget.ImageButton;
-import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
-public class SummaryView {
+public class SummaryView implements Observer {
 	View view;
 	DinnerModel model;
 	Dish starter;
@@ -87,8 +83,8 @@ public class SummaryView {
 		switch(type){
 		case INGREDIENTS : 
 			title.setText(R.string.ingredients_text);			
-			coursetitle.setVisibility(view.GONE);			
-			nrofpers.setVisibility(view.VISIBLE);	
+			coursetitle.setVisibility(View.GONE);			
+			nrofpers.setVisibility(View.VISIBLE);	
 			nrofpers.setText(model.getNumberOfGuests()+" pers");
 			Set<Ingredient> ingredients = model.getAllIngredients();
 			StringBuilder namesb = new StringBuilder(); 
@@ -99,33 +95,41 @@ public class SummaryView {
 			}
 			textArea.setText(namesb.toString());
 			unitText.setText(unitsb.toString());
-			unitText.setVisibility(view.VISIBLE);
+			unitText.setVisibility(View.VISIBLE);
 			break;
 		case STARTER :  
 			title.setText(R.string.starter_text);
 			coursetitle.setText(starter.getName());
-			coursetitle.setVisibility(view.VISIBLE);
-			nrofpers.setVisibility(view.GONE);
+			coursetitle.setVisibility(View.VISIBLE);
+			nrofpers.setVisibility(View.GONE);
 			textArea.setText(starter.getDescription());
-			unitText.setVisibility(view.GONE);
+			unitText.setVisibility(View.GONE);
 			break;
 		case MAIN :
 			title.setText(R.string.main_text);
 			coursetitle.setText(main.getName());
-			coursetitle.setVisibility(view.VISIBLE);
-			nrofpers.setVisibility(view.GONE);
+			coursetitle.setVisibility(View.VISIBLE);
+			nrofpers.setVisibility(View.GONE);
 			textArea.setText(main.getDescription());
-			unitText.setVisibility(view.GONE);
+			unitText.setVisibility(View.GONE);
 			break;
 		case DESERT :
 			title.setText(R.string.desert_text);
 			coursetitle.setText(desert.getName());
-			coursetitle.setVisibility(view.VISIBLE);
-			nrofpers.setVisibility(view.GONE);
+			coursetitle.setVisibility(View.VISIBLE);
+			nrofpers.setVisibility(View.GONE);
 			textArea.setText(desert.getDescription());
-			unitText.setVisibility(view.GONE);
+			unitText.setVisibility(View.GONE);
 			break;
 		}
+	}
+
+
+	@Override
+	public void update(Observable observable, Object data) {
+		observable.addObserver(this);
+		// TODO Auto-generated method stub
+		// Pass in notifyObservers method i.e
 	}
 
 }

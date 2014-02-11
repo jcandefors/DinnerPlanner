@@ -1,19 +1,17 @@
 package se.kth.csc.iprog.dinnerplanner.android.view;
 
-import java.util.Set;
+import java.util.Observable;
+import java.util.Observer;
 
 import se.kth.csc.iprog.dinnerplanner.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
-import se.kth.csc.iprog.dinnerplanner.model.Dish;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class TopView {
+public class TopView implements Observer {
 
 	View view;
 	DinnerModel model;
@@ -42,22 +40,28 @@ public class TopView {
 
 	public void setTotalCost() {
 		totalCost.setText("Total cost: " + model.getTotalMenuPrice() +"kr" );
-		
+
 	}
 
 	public void hideSpinner() {
 		guestsSpinner.setVisibility(View.GONE);
 		personText.setVisibility(View.GONE);
 		backbutton.setVisibility(View.VISIBLE);
-		
+
 	}
 
 	public void hideBackArrow() {
 		backbutton.setVisibility(View.GONE);
 		personText.setVisibility(View.VISIBLE);
 		guestsSpinner.setVisibility(View.VISIBLE);
+
+	}
+
+	@Override
+	public void update(Observable observable, Object data) {
+		observable.addObserver(this);
+		// TODO Auto-generated method stub
+		// Pass in notifyObservers method i.e
 		
 	}
-	
-	
 }

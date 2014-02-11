@@ -1,8 +1,10 @@
 package se.kth.csc.iprog.dinnerplanner.model;
 
+import android.annotation.SuppressLint;
 import java.util.HashSet;
 import java.util.Set;
 
+@SuppressLint("DefaultLocale")
 public class Dish {
 	
 	public static final int STARTER = 1;

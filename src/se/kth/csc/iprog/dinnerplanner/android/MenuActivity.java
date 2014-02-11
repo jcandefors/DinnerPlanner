@@ -22,7 +22,8 @@ public class MenuActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_menu);
 
-		model = ((DinnerPlannerApplication) this.getApplication()).getModel();		
+		model = ((DinnerPlannerApplication) this.getApplication()).getModel();
+		
 		Context context = getBaseContext();
 		new MenuView(findViewById(R.id.menu_view_id), model, context);		
 

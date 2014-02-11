@@ -24,7 +24,7 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="right"
-             android:text="Close" />
+             android:text="@string/button_close" />
  
       <TextView
           android:id="@+id/popup_name"
@@ -38,9 +38,10 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <ImageView              
+            <ImageView      
+                android:contentDescription="@string/main_text"        
                 android:id="@+id/popup_image"              
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/meatballs"
                 android:layout_weight="1"
@@ -59,7 +60,7 @@
           android:id="@+id/popup_choose"
           android:layout_width="fill_parent"
           android:layout_height="wrap_content"
-          android:text="Choose" />
+          android:text="@string/button_choose" />
       </LinearLayout>
  </LinearLayout>
 </LinearLayout>

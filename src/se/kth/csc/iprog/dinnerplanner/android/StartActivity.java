@@ -18,7 +18,7 @@ public class StartActivity extends Activity {
 		setContentView(R.layout.activity_start);
 
 		// Creating the view class instance
-		StartView startView = new StartView(findViewById(R.id.start_view_id));
+		new StartView(findViewById(R.id.start_view_id));
 
 		// Create and add listner to button start Menu
 		Button next = (Button) findViewById(R.id.button);
