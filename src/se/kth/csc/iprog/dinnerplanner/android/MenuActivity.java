@@ -6,9 +6,8 @@ import se.kth.csc.iprog.dinnerplanner.android.view.TopView;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
 import android.view.Menu;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 public class MenuActivity extends Activity {
 
@@ -19,17 +18,12 @@ public class MenuActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_menu);
 		
-		DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
+		DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();		
+		Context context = getBaseContext();
+		new MenuView(findViewById(R.id.menu_view_id), model, context);		
+		
 		top = new TopView(findViewById(R.id.top_view_id), model);
 		top.hideBackArrow();
-		MenuView mainView = new MenuView(findViewById(R.id.menu_view_id), model);
-
-		
-		
-	    /*LinearLayout layout = new LinearLayout(this);
-	    LinearLayout.LayoutParams layoutP = new LinearLayout.LayoutParams(WRAP_CONTENT, 65);
-		layout.setOrientation(LinearLayout.VERTICAL);
-		layout.setLayoutParams(layoutP);*/
 	}
 
 	@Override

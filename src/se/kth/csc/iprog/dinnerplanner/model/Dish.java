@@ -72,4 +72,14 @@ public class Dish {
 		return false;
 	}
 
+    public float getDishPrice(){
+        float price = 0;
+         
+        for(Ingredient i : ingredients){
+             price += i.getPrice();
+        }
+         
+        return price;
+    }
+
 }

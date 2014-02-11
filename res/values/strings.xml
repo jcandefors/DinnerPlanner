@@ -12,7 +12,7 @@
     <string name="starter_text">Starter</string>
     <string name="main_text">Main</string>
     <string name="desert_text">Desert</string>
-    <string name="title_activity_menu">Menu Activity</string>
+    <string name="title_activity_menu">MenuActivity</string>
     <string name="lbl_participants">Participants</string>
     <string name="lbl_cost">Total cost:</string>
     <string name="cost">Total cost: 0 kr</string>
