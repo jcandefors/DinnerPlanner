@@ -7,7 +7,9 @@ import se.kth.csc.iprog.dinnerplanner.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
 import se.kth.csc.iprog.dinnerplanner.model.Ingredient;
+import android.R.color;
 import android.view.View;
+import android.webkit.WebView.FindListener;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -80,10 +82,10 @@ public class SummaryView {
 		TextView coursetitle = (TextView) view.findViewById(R.id.summary_Course_Title_id);
 		TextView nrofpers = (TextView) view.findViewById(R.id.ingr_nrpersons);
 		TextView textArea = (TextView) view.findViewById(R.id.summary_textarea_id);
-		TextView unitText = (TextView) view.findViewById(R.id.summary_unittext_id);
+		TextView unitText = (TextView) view.findViewById(R.id.summary_unittext_id);		
 
 		switch(type){
-		case INGREDIENTS : 			
+		case INGREDIENTS : 
 			title.setText(R.string.ingredients_text);			
 			coursetitle.setVisibility(view.GONE);			
 			nrofpers.setVisibility(view.VISIBLE);	
