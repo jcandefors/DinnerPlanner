@@ -1,13 +1,13 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
 import se.kth.csc.iprog.dinnerplanner.R;
+import se.kth.csc.iprog.dinnerplanner.android.view.SummaryButtonListener;
 import se.kth.csc.iprog.dinnerplanner.android.view.SummaryView;
 import se.kth.csc.iprog.dinnerplanner.android.view.TopView;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-import android.view.View;
 
 public class SummaryActivity extends Activity {
 	TopView top;
@@ -20,10 +20,11 @@ public class SummaryActivity extends Activity {
 		setContentView(R.layout.activity_summary);
     	// Creating the view class instance
 		model = ((DinnerPlannerApplication) this.getApplication()).getModel();
-    	top = new TopView(findViewById(R.id.top_view_id), model);
+		
+    	top = new TopView(findViewById(R.id.top_view_id), model, this);
     	top.hideSpinner();
-		summaryView = new SummaryView(findViewById(R.id.summary_view_id), model);
-    	
+		summaryView = new SummaryView(this,findViewById(R.id.summary_view_id), model);		
+		new SummaryButtonListener(model,summaryView);
     	
     	
 	}
@@ -35,20 +36,5 @@ public class SummaryActivity extends Activity {
 		return true;
 	}
 	
-	public void changeTab(View view){
-		
-		switch (view.getId()){
-		case R.id.ingrButton1 :  summaryView.changeTab(SummaryView.INGREDIENTS);
-		break;
-		case R.id.instrButton1 : summaryView.changeTab(SummaryView.STARTER);
-		break;
-		case R.id.instrButton2 : summaryView.changeTab(SummaryView.MAIN);
-		break;
-		case R.id.instrButton3 : summaryView.changeTab(SummaryView.DESERT);
-		break;
-		}
-		
-	
-	}
 
 }

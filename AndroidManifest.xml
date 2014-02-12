@@ -16,7 +16,8 @@
         android:theme="@style/MyTheme" >
         <activity
             android:name="se.kth.csc.iprog.dinnerplanner.android.StartActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,10 +27,17 @@
         <activity
             android:name="se.kth.csc.iprog.dinnerplanner.android.MenuActivity"
             android:label="@string/title_activity_menu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="se.kth.csc.iprog.dinnerplanner.android.StartActivity" />
         </activity>
         <activity
             android:name="se.kth.csc.iprog.dinnerplanner.android.SummaryActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:parentActivityName="MenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="se.kth.csc.iprog.dinnerplanner.android.MenuActivity" />
         </activity>
     </application>
 

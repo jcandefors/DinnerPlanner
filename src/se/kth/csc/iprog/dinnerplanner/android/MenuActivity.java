@@ -27,7 +27,7 @@ public class MenuActivity extends Activity {
 		Context context = getBaseContext();
 		new MenuView(findViewById(R.id.menu_view_id), model, context);		
 
-		top = new TopView(findViewById(R.id.top_view_id), model);
+		top = new TopView(findViewById(R.id.top_view_id), model,this);
 		top.hideBackArrow();
 
 		Button createButton = (Button) findViewById(R.id.button_create);

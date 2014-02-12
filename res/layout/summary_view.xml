@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:layout_marginLeft="145dp"            
+            android:layout_marginLeft="145dp"
             android:text="@string/instructions_text" />
 
         <LinearLayout
@@ -23,45 +23,46 @@
             android:orientation="horizontal" >
 
             <ImageButton
-                android:contentDescription="@string/starter_text"
                 android:id="@+id/ingrButton1"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="3"
-                android:onClick="changeTab"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/starter_text"
+                android:scaleType="center"
                 android:src="@drawable/ingr_img" />
 
             <ImageButton
-				android:contentDescription="@string/main_text"
                 android:id="@+id/instrButton1"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:onClick="changeTab"
-                android:src="@drawable/img_holder" />
+                android:contentDescription="@string/main_text"
+                android:padding="5dp"
+                android:scaleType="fitXY" />
 
             <ImageButton
-                android:contentDescription="@string/desert_text"
                 android:id="@+id/instrButton2"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:onClick="changeTab"
-                android:src="@drawable/img_holder" />
+                android:contentDescription="@string/desert_text"
+                android:padding="5dp"
+                android:scaleType="fitXY" />
 
             <ImageButton
-                android:contentDescription="@string/main_text"
                 android:id="@+id/instrButton3"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:onClick="changeTab"
-                android:src="@drawable/img_holder" />
+                android:contentDescription="@string/main_text"
+                android:padding="5dp"
+                android:scaleType="fitXY" />
         </LinearLayout>
 
         <LinearLayout

@@ -5,6 +5,7 @@ import java.util.Observer;
 
 import se.kth.csc.iprog.dinnerplanner.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
+import android.app.Activity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
@@ -16,17 +17,20 @@ public class TopView implements Observer {
 	View view;
 	DinnerModel model;
 	public final static int MENU=1, SUMMARY=2;
-	Spinner guestsSpinner;
-	ImageButton backbutton;
-	TextView personText;
-	TextView totalCost;
+	public Spinner guestsSpinner;
+	public ImageButton backbutton;
+	public TextView personText;
+	public TextView totalCost;
 
-	public TopView(View view, DinnerModel model) {
+	public TopView(View view, DinnerModel model, Activity activity) {
 		this.view = view;
 		this.model = model;
+		TopViewListener topListener = new TopViewListener(this, model, activity);
 
 		personText = (TextView) view.findViewById(R.id.TextParticipants);
-		backbutton = (ImageButton) view.findViewById(R.id.backarrow_id);			
+		backbutton = (ImageButton) view.findViewById(R.id.backarrow_id);
+		backbutton.setOnClickListener(topListener);
+		
 		guestsSpinner = (Spinner) view.findViewById(R.id.spinner_guests);
 		Integer[] items = new Integer[]{1,2,3,4,5,6,7,8,9,10};
 		ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(view.getContext(),android.R.layout.simple_spinner_item, items);
