@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
     <issue id="BackButton" severity="warning" />
+    <issue id="DefaultLocale">
+        <ignore path="src/se/kth/csc/iprog/dinnerplanner/model/Dish.java" />
+    </issue>
     <issue id="EasterEgg" severity="warning" />
     <issue id="FieldGetter" severity="warning" />
     <issue id="IconExpectedSize" severity="warning" />

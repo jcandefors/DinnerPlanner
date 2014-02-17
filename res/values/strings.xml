@@ -19,7 +19,7 @@
     <string name="lbl_dessert">Dessert</string>
     <string name="lbl_tmp">tmp</string>
     <string name="button_create">Create</string>
-    <string name="button_choose">Choose</string>
     <string name="button_close">Close</string>
+    <string name="button_choose">Choose</string>
 
 </resources>

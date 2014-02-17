@@ -23,7 +23,7 @@ public class StartActivity extends Activity {
 		// Create and add listner to button start Menu
 		Button next = (Button) findViewById(R.id.button);
 		next.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View view) {
+			public void onClick(View view) {				
 				Intent myIntent = new Intent(view.getContext(), MenuActivity.class);
 				startActivityForResult(myIntent, 0);
 			}

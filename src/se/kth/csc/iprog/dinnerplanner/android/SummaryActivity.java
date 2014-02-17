@@ -25,8 +25,6 @@ public class SummaryActivity extends Activity {
     	top.hideSpinner();
 		summaryView = new SummaryView(this,findViewById(R.id.summary_view_id), model);		
 		new SummaryButtonListener(model,summaryView);
-    	
-    	
 	}
 
 	@Override

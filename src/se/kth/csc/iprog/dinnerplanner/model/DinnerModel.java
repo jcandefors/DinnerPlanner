@@ -60,8 +60,8 @@ public class DinnerModel extends Observable<Object> implements IDinnerModel {
 		dish2.addIngredient(dish2ing10);
 		dish2.addIngredient(dish2ing11);
 		dishes.add(dish2);
-		
-		
+
+
 		//TO check summary activity
 		selectedDishes.add(dish1);
 		selectedDishes.add(dish2);
@@ -146,7 +146,5 @@ public class DinnerModel extends Observable<Object> implements IDinnerModel {
 		}
 		return price;
 	}
-
-
 
 }

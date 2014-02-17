@@ -28,25 +28,28 @@ public class SummaryView implements Observer {
 	public TextView textArea;
 	public TextView unitText;
 	
-	public ImageButton ingrbutton1;
-	
+	public ImageButton ingrbutton1;	
 	public ImageButton instrbutton1;
 	public ImageButton instrbutton2;
 	public ImageButton instrbutton3;
 	
 	public static final int INGREDIENTS = 4, STARTER = 1, MAIN = 2, DESERT = 3;
 
-
 	public SummaryView(Activity activity, View view, DinnerModel model) {
 		this.model = model;
-		this.activity = activity;		
-
+		this.activity = activity;
+		this.view = view;
+		
+		start();
+	}
+	
+	public void start(){
+		
 		starter = model.getSelectedDish(STARTER);
 		main = model.getSelectedDish(MAIN);
 		desert = model.getSelectedDish(DESERT);
-		
-		// store in the class the reference to the Android View
-		this.view = view;
+
+		model.registerObserver(this);
 
 		ingrbutton1 = (ImageButton) view.findViewById(R.id.ingrButton1);
 		
@@ -116,14 +119,11 @@ public class SummaryView implements Observer {
 		textArea.setText(namesb.toString());
 		unitText.setText(unitsb.toString());
 		unitText.setVisibility(View.VISIBLE);
-		
 	}
 
 	@Override
 	public void update(Observable observable, Object data) {
-		observable.addObserver(this);
-		// TODO Auto-generated method stub
-		// Pass in notifyObservers method i.e
+		start();
 	}
 
 }

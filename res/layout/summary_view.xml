@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:layout_marginLeft="145dp"
+            android:layout_marginStart="145dp"
             android:text="@string/instructions_text" />
 
         <LinearLayout
@@ -26,8 +26,8 @@
                 android:id="@+id/ingrButton1"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_weight="3"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/starter_text"
@@ -38,7 +38,7 @@
                 android:id="@+id/instrButton1"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/main_text"
                 android:padding="5dp"
@@ -48,7 +48,7 @@
                 android:id="@+id/instrButton2"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/desert_text"
                 android:padding="5dp"
@@ -58,7 +58,7 @@
                 android:id="@+id/instrButton3"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/main_text"
                 android:padding="5dp"
@@ -73,8 +73,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp"
                 android:text="@string/ingredients_text"
                 android:textSize="12sp" />
 
@@ -82,29 +82,29 @@
                 android:id="@+id/instrText1_id"
                 android:layout_width="65dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/instrText2_id"
                 android:layout_width="65dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/instrText3_id"
                 android:layout_width="65dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:textSize="12sp" />
         </LinearLayout>
 
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"
             android:background="@android:color/black" />
 
@@ -112,8 +112,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp" >
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" >
 
             <RelativeLayout
                 android:layout_width="fill_parent"
@@ -125,24 +125,24 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/ingr_nrpersons"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@id/summary_text_title_id"
+                    android:layout_toEndOf="@id/summary_text_title_id"
                     android:gravity="right"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
             </RelativeLayout>
 
             <TextView
                 android:id="@+id/summary_Course_Title_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18dp" />
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -154,15 +154,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="top"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/summary_unittext_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:gravity="top"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
