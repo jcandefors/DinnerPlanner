@@ -13,18 +13,18 @@ public class SummaryActivity extends Activity {
 	TopView top;
 	SummaryView summaryView;
 	DinnerModel model;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);		
 		setContentView(R.layout.activity_summary);
-    	// Creating the view class instance
+
 		model = ((DinnerPlannerApplication) this.getApplication()).getModel();
-		
-    	top = new TopView(findViewById(R.id.top_view_id), model, this);
-    	top.hideSpinner();
-		summaryView = new SummaryView(this,findViewById(R.id.summary_view_id), model);		
-		new SummaryButtonListener(model,summaryView);
+
+		top = new TopView(findViewById(R.id.top_view_id), model, this);
+		top.hideSpinner();
+		summaryView = new SummaryView(this,findViewById(R.id.summary_view_id), model);
+		new SummaryButtonListener(model,summaryView, this);
 	}
 
 	@Override
@@ -33,6 +33,6 @@ public class SummaryActivity extends Activity {
 		getMenuInflater().inflate(R.menu.summary, menu);
 		return true;
 	}
-	
+
 
 }

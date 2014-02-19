@@ -38,8 +38,8 @@ public class MenuActivity extends Activity {
                 if(model.getFullMenu().isEmpty()){
                     //do nothing                   
                 }else{                 
-                    Intent myIntent = new Intent(view.getContext(), SummaryActivity.class);
-                    startActivityForResult(myIntent, 0);
+                    Intent intent = new Intent(view.getContext(), SummaryActivity.class).putExtra("from", "MenuActivity");
+                    startActivity(intent);
                 }
             }
         });

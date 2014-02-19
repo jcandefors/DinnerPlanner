@@ -24,8 +24,8 @@ public class StartActivity extends Activity {
 		Button next = (Button) findViewById(R.id.button);
 		next.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {				
-				Intent myIntent = new Intent(view.getContext(), MenuActivity.class);
-				startActivityForResult(myIntent, 0);
+				Intent intent = new Intent(view.getContext(), MenuActivity.class).putExtra("from", "StartActivity");
+				startActivity(intent);
 			}
 		});
 

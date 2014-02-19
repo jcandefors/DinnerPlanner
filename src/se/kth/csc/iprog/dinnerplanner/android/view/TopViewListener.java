@@ -9,21 +9,23 @@ import android.view.View.OnClickListener;
 
 public class TopViewListener implements OnClickListener {
 
-	TopView mainView;
+	TopView view;
 	Activity currentActivity;
 	DinnerModel model;
+	Activity activity;
 
 	public TopViewListener(TopView view, DinnerModel model,Activity activity){
-		currentActivity = activity;
+		this.activity = activity;
 		this.model = model;
-		mainView = view;
+		this.view = view;
+		
+		//view.backbutton.setOnClickListener(this);
 	}
-
 
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()){
-		case R.id.backarrow_id : NavUtils.navigateUpFromSameTask(currentActivity);			
+		case R.id.backarrow_id : NavUtils.navigateUpFromSameTask(currentActivity);	
 		break;	
 		//case : ....
 		}

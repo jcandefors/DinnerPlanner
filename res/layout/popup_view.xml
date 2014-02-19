@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_view_id"
+     
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@android:color/background_light"
     android:orientation="vertical" >
- 
+  
  <LinearLayout
      android:layout_width="250dp"
      android:layout_height="wrap_content"
      android:layout_gravity="center"
      android:layout_margin="1dp"
-     android:background="@android:color/darker_gray"
+     android:background="@layout/border"
      android:orientation="horizontal" >
-      
+       
      <LinearLayout
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:orientation="vertical"
       android:layout_margin="20dp">
- 
+  
          <Button
              android:id="@+id/popup_close"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="right"
              android:text="@string/button_close" />
- 
+  
       <TextView
           android:id="@+id/popup_name"
           android:layout_width="fill_parent"
@@ -38,9 +40,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <ImageView      
-                android:contentDescription="@string/main_text"        
-                android:id="@+id/popup_image"              
+            <ImageView     
+                android:contentDescription="@string/main_text"       
+                android:id="@+id/popup_image"             
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/meatballs"
@@ -53,9 +55,9 @@
                 android:text="@string/lbl_tmp"
                 android:textSize="20sp"
                 android:layout_gravity="center_vertical"/>
-           
+            
       </LinearLayout>
- 
+  
       <Button
           android:id="@+id/popup_choose"
           android:layout_width="fill_parent"

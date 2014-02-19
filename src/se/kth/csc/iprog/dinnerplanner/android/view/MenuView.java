@@ -39,7 +39,7 @@ public class MenuView implements Observer {
 		this.activity = activity;
 		buttonList = new ArrayList<ImageButton>();
 
-		model.registerObserver(this);
+		model.addObserver(this);
 		buttons();
 	}
 
