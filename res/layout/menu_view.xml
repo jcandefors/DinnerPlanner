@@ -4,91 +4,85 @@
     android:id="@+id/menu_view_id"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="10dp"
+    android:layout_marginStart="10dp"
     android:orientation="vertical" >
- 
+
     <TextView
         android:id="@+id/TextView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:ems="10"
         android:text="@string/lbl_choose"
-        android:textSize="30sp" />
- 
+        android:textSize="20sp" />
+
     <TextView
         android:id="@+id/TextView02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:text="@string/lbl_starter"
-        android:textSize="20sp" />
- 
+        android:textSize="15sp" />
+
     <HorizontalScrollView
         android:id="@+id/scrollview_starter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp" >
- 
+        android:layout_marginBottom="10dp" >
+
         <LinearLayout
             android:id="@+id/linear_starter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
- 
- 
         </LinearLayout>
     </HorizontalScrollView>
- 
+
     <TextView
         android:id="@+id/TextView03"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:text="@string/lbl_main"
-        android:textSize="20sp" />
- 
+        android:textSize="15sp" />
+
     <HorizontalScrollView
         android:id="@+id/scrollview_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp" >
- 
+        android:layout_marginBottom="10dp" >
+
         <LinearLayout
-            android:id="@+id/layout_main"           
+            android:id="@+id/layout_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="bottom"
             android:orientation="horizontal" >
- 
- 
         </LinearLayout>
     </HorizontalScrollView>
- 
+
     <TextView
         android:id="@+id/TextView04"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:text="@string/lbl_dessert"
-        android:textSize="20sp" />
- 
+        android:textSize="15sp" />
+
     <HorizontalScrollView
         android:id="@+id/scrollview_dessert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp" >
- 
+        android:layout_marginBottom="10dp" >
+
         <LinearLayout
             android:id="@+id/layout_dessert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="bottom"
             android:orientation="horizontal" >
- 
- 
         </LinearLayout>
     </HorizontalScrollView>
- 
+
     <Button
         android:id="@+id/button_create"
         android:layout_width="wrap_content"
@@ -96,5 +90,5 @@
         android:layout_gravity="center"
         android:background="#980000"
         android:text="@string/button_create" />
- 
+
 </LinearLayout>

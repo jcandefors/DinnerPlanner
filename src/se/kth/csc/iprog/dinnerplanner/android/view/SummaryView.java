@@ -32,6 +32,7 @@ public class SummaryView implements Observer {
 	public ImageButton instrbutton1;
 	public ImageButton instrbutton2;
 	public ImageButton instrbutton3;
+    public ImageButton backbutton;
 	TextView instrtext1;
 	TextView instrtext2;
 	TextView instrtext3;
@@ -45,7 +46,9 @@ public class SummaryView implements Observer {
 
 		model.addObserver(this);	
 		
-		ingrbutton1 = (ImageButton) view.findViewById(R.id.ingrButton1);		
+		ingrbutton1 = (ImageButton) view.findViewById(R.id.ingrButton1);	
+        backbutton = (ImageButton) view.findViewById(R.id.backarrow_id);
+
 
 		// Get Starter ImageButton and TextView
 		instrbutton1 = (ImageButton) view.findViewById(R.id.instrButton1);
@@ -92,6 +95,7 @@ public class SummaryView implements Observer {
 		desert = model.getSelectedDish(DESERT);
 		
 		ingrbutton1.setOnClickListener(buttonListener);
+		backbutton.setOnClickListener(buttonListener);
 
 		// Change TextView below to Starter text
 		if(starter != null){		
